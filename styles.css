@@ -74,6 +74,10 @@ h6 {
     --gray-blue: hsl(229, 6%, 66%);
     --light-gray-blue: hsl(229, 6%, 88%);
     --light-gray: hsl(0, 0%, 98%);
+
+    /* Fonts */
+    --main-heading-size: 1.7rem;
+    --feature-heading-size: 1.2rem;
 }
 
 /* Global Styles */
@@ -105,13 +109,13 @@ main {
 
 h1 {
     color: var(--dark-blue);
-    font-size: 1.7rem;
+    font-size: var(--main-heading-size);
     font-weight: 200;
     display: grid;
     line-height: 1.5;
 }
 
-.bold {
+strong {
     font-weight: 600;
 }
 
@@ -180,7 +184,7 @@ h1 {
 
 h3 {
     color: var(--dark-blue);
-    font-size: 1.5rem;
+    font-size: var(--feature-heading-size);
     font-weight: 600;
 }
 
@@ -192,6 +196,9 @@ h3 {
 }
 
 @media (min-width: 992px) {
+  :root {
+    --main-heading-size: 2.5rem;
+  }
   .tools {
     max-width: 80vw;
     grid-template-columns: repeat(3, 1fr);
